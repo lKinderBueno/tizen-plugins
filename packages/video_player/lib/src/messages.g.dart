@@ -384,6 +384,7 @@ class TizenVideoPlayerApi {
     final BasicMessageChannel<Object?> channel = BasicMessageChannel<Object?>(
         'dev.flutter.pigeon.TizenVideoPlayerApi.setPlaybackSpeed', codec,
         binaryMessenger: _binaryMessenger);
+    return;
     final List<Object?>? replyList =
         await channel.send(<Object?>[arg_msg]) as List<Object?>?;
     if (replyList == null) {
