@@ -586,10 +586,9 @@ void TizenVideoPlayerApi::SetUp(flutter::BinaryMessenger* binary_messenger,
               wrapped.push_back(flutter::EncodableValue());
               reply(flutter::EncodableValue(std::move(wrapped)));
             } catch (const std::exception& exception) {
-              reply(WrapError(exception.what()));
-              EncodableList wrapped;
-              wrapped.push_back(EncodableValue());
-              reply(EncodableValue(std::move(wrapped)));
+              flutter::EncodableList wrapped;
+              wrapped.push_back(flutter::EncodableValue());
+              reply(flutter::EncodableValue(std::move(wrapped)));
               //reply(WrapError(exception.what()));
             }
           });
